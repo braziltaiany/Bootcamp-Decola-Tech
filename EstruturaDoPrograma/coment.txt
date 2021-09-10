@@ -1,0 +1,3 @@
+pilha e program são classes
+
+csproj é  um xml um arqui executavel
