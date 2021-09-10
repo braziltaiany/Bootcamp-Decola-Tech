@@ -1,12 +1,18 @@
-﻿using System;
+﻿ using System;
 
-namespace ConhecendoVariaveisInstrucoes
-{
-    class Program
+ namespace ConhecendoVariaveisInstrucoes
+ {
+    class Executar
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+         static void Main(string[] args)
+         {
+            Program declaracoes = new Program();
+            int soma = declaracoes.Declaracoes();
+            Console.WriteLine(soma);
+
+
+
+
+         }
+     }
+ } 
