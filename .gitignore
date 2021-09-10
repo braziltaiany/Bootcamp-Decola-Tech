@@ -1,9 +1,13 @@
 .Vscode
-IniciandoComDotnet.Vscode
-EstruturaDoPrograma/.Vscode
 
 IniciandoComDotnet/bin
 IniciandoComDotnet/obj
+IniciandoComDotnet/.Vscode
 
 EstruturaDoPrograma/bin
 EstruturaDoPrograma/obj
+EstruturaDoPrograma/.Vscode
+
+ConhecendoVariaveisInstrucoes/bin
+ConhecendoVariaveisInstrucoes/obj
+ConhecendoVariaveisInstrucoes/.Vscode
