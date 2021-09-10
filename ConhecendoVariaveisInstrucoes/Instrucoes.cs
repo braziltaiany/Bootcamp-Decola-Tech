@@ -30,7 +30,22 @@ namespace ConhecendoVariaveisInstrucoes
                 Console.WriteLine($"{arr.Length} argumentos");
             }
         }
-
+        
+        public void InstrucaoSwitch(string[] lista)
+        {
+            int numerosDeArgumentos = lista.Length;
+            switch (numerosDeArgumentos)
+            {
+                case 0:
+                    Console.WriteLine("Nenhum argumento");
+                    break;
+                case 1:
+                    Console.WriteLine("Um argumento");
+                    break;
+                default:
+                    Console.WriteLine($"{numerosDeArgumentos} argumentos");
+                    break;
+            }
         
         }    
     }
