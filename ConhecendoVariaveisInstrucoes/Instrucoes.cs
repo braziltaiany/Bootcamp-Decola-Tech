@@ -84,6 +84,21 @@ namespace ConhecendoVariaveisInstrucoes
                 Console.WriteLine(item);
             }
         }
+
+        public void InstrucaoBreak(string[] textos)
+        {
+            while (true)
+            {
+                string item = Console.ReadLine();
+
+                if (string.IsNullOrEmpty(item))
+                {
+                    break;
+                }
+
+                Console.WriteLine(item);
+            }
+        }
         
 
     }

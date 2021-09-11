@@ -24,6 +24,8 @@
             instrucoes.InstrucaoFor(lista);
 
             instrucoes.InstrucaoForeach(lista);
+
+            instrucoes.InstrucaoBreak(textos);
          }
      }
  } 
