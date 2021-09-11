@@ -15,19 +15,19 @@ namespace ConhecendoVariaveisInstrucoes
             return a + b + c + d;
         }
 
-        public void InstrucaoIf(int[] arr)
+        public void InstrucaoIf(int[] numeros)
         {               
-            if (arr.Length == 0)
+            if (numeros.Length == 0)
             {
                 Console.WriteLine("Nenhum argumento");
             }
-            else if (arr.Length == 1)
+            else if (numeros.Length == 1)
             {
                 Console.WriteLine("Um argumento");
             }
             else
             {
-                Console.WriteLine($"{arr.Length} argumentos");
+                Console.WriteLine($"{numeros.Length} argumentos");
             }
         }
         
@@ -113,8 +113,18 @@ namespace ConhecendoVariaveisInstrucoes
             }
         }
 
-
-        
+        public void InstrucaoReturn()
+        {
+            int Somar (int a, int b)
+            {
+                return a + b;
+            }
+            
+            Console.WriteLine(Somar(1, 2));
+            Console.WriteLine(Somar(3, 4));
+            Console.WriteLine(Somar(5, 6));
+            return;
+        }       
 
     }
 }
