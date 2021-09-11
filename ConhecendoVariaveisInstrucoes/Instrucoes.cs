@@ -160,5 +160,15 @@ namespace ConhecendoVariaveisInstrucoes
                 Console.WriteLine("Até breve!");
             }
         }
+
+        public void InstrucaoUsing()
+        {
+            using (System.IO.TextWriter w = System.IO.File.CreateText("testeInstrucaoUsing.txt"))
+            {
+                w.WriteLine("Linha 1");
+                w.WriteLine("Linha 2");
+                w.WriteLine("Linha 3");
+            }
+        }
     }
 }

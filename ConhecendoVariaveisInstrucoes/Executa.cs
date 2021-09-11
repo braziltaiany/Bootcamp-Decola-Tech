@@ -33,6 +33,8 @@
 
             instrucoes.InstrucoesTryCatchFinallyThrow(lista);
 
+            instrucoes.InstrucaoUsing();
+
          }
      }
  } 
