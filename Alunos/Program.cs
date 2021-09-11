@@ -25,12 +25,6 @@ namespace Alunos
                     default: throw new ArgumentOutOfRangeException();
 
                 }
-                Console.WriteLine("Informe a opção desejada:");
-                Console.WriteLine("1- Inserir Novo Aluno");
-                Console.WriteLine("2- Listar Alunos");
-                Console.WriteLine("3- Calcular média geral");
-                Console.WriteLine("X- Sair");
-                Console.WriteLine();
 
                 opcaoUsuario = ObterOpcaoUsuario();
             }
