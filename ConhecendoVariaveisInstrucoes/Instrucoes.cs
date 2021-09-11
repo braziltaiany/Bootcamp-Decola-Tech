@@ -47,6 +47,17 @@ namespace ConhecendoVariaveisInstrucoes
                     break;
             }
         
-        }    
+        }
+
+        public void InstrucaoWhile(string[] lista)
+        {
+            int i = 0;
+            while ( i < lista.Length)
+            {
+                Console.WriteLine($"Item {lista[i]}");
+                i++;
+            }
+        }
+
     }
 }
