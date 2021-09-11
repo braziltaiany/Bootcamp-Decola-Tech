@@ -22,6 +22,8 @@
             instrucoes.InstrucaoDo(textos);
 
             instrucoes.InstrucaoFor(lista);
+
+            instrucoes.InstrucaoForeach(lista);
          }
      }
  } 

@@ -76,6 +76,15 @@ namespace ConhecendoVariaveisInstrucoes
                 Console.WriteLine($"{lista[i]}º item é : {lista[i]}.");
             }
         }
+        
+        public void InstrucaoForeach(string[] lista)
+        {
+            foreach (string item in lista)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        
 
     }
 }
