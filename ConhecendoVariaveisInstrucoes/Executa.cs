@@ -8,7 +8,7 @@
          {
             Program instrucoes = new Program();
             int soma = instrucoes.Declaracoes();
-            Console.WriteLine($"A soma é {soma}");
+            Console.WriteLine($"A soma é igual a {soma}");
 
             int[] arr = { 25, 10, 20, 15, 40, 50 };
             instrucoes.InstrucaoIf(arr);
@@ -18,6 +18,8 @@
 
             instrucoes.InstrucaoWhile(lista);
             
+            string[] textos = new string[3];
+            instrucoes.InstrucaoDo(textos);
          }
      }
  } 

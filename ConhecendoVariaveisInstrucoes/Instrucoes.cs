@@ -59,5 +59,15 @@ namespace ConhecendoVariaveisInstrucoes
             }
         }
 
+        public void InstrucaoDo(string[] textos)
+        {
+            string texto;
+            do
+            {
+                texto = Console.ReadLine();
+                Console.WriteLine(texto);
+            } while (!string.IsNullOrEmpty(texto));
+        }
+
     }
 }
