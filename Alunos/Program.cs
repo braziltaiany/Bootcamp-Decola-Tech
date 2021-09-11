@@ -6,6 +6,7 @@ namespace Alunos
     {
         static void Main(string[] args)
         {
+            Aluno[] alunos = new Aluno[5];
             string opcaoUsuario = ObterOpcaoUsuario();
 
             while (opcaoUsuario.ToUpper() != "X")
@@ -13,7 +14,15 @@ namespace Alunos
                 switch (opcaoUsuario)
                 {
                     case "1":
-                        //TODO: adicionar aluno
+                        Console.WriteLine("Informe o nome do aluno:");
+                        Aluno aluno = new Aluno();
+                        aluno.Nome = Console.ReadLine();
+
+                        Console.WriteLine("Informe a nota do aluno:");
+
+                        var nota = decimal.Parse(Console.ReadLine());
+                        aluno.Nota = nota;
+                      
                         break;
                     case "2":
                         //TODO: listar alunos
