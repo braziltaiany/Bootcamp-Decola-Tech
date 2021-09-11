@@ -32,11 +32,17 @@ namespace Alunos
                         
                         alunos[indeceAluno] = aluno;
                         indeceAluno++;
+                        
+                        break;
 
-                        break;
                     case "2":
-                        //TODO: listar alunos
+                        foreach (var alunoA in alunos)
+                        {
+                            Console.WriteLine($"ALUNO: {alunoA.Nome} - NOTA: {alunoA.Nota}");
+                        }
+                        
                         break;
+
                     case "3":
                         //TODO: calcular média geral
                         break;
