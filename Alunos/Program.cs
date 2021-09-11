@@ -37,8 +37,11 @@ namespace Alunos
 
                     case "2":
                         foreach (var alunoA in alunos)
-                        {
-                            Console.WriteLine($"ALUNO: {alunoA.Nome} - NOTA: {alunoA.Nota}");
+                        {   
+                            if(!string.IsNullOrEmpty(alunoA.Nome))
+                            {
+                                Console.WriteLine($"ALUNO: {alunoA.Nome} - NOTA: {alunoA.Nota}");
+                            }
                         }
                         
                         break;
