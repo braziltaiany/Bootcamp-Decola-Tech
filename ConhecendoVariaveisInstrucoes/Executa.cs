@@ -26,6 +26,8 @@
             instrucoes.InstrucaoForeach(lista);
 
             instrucoes.InstrucaoBreak(textos);
+
+            instrucoes.InstrucaoContinue(lista);
          }
      }
  } 

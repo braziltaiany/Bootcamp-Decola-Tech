@@ -99,6 +99,21 @@ namespace ConhecendoVariaveisInstrucoes
                 Console.WriteLine(item);
             }
         }
+
+        public void InstrucaoContinue(string[] lista)
+        {
+            for (int i = 0; i < lista.Length; i++)
+            {
+                if (lista[i].StartsWith("/"))
+                {
+                    continue;
+                }
+
+                Console.WriteLine($"Olá, quero {lista[i]} café.");
+            }
+        }
+
+
         
 
     }
