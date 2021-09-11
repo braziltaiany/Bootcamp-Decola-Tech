@@ -47,7 +47,21 @@ namespace Alunos
                         break;
 
                     case "3":
-                        //TODO: calcular média geral
+                    decimal notaTotal = 0;
+                    var numeroAlunos = 0;
+
+                        for (int i = 0; i < alunos.Length; i++)
+                        {
+                            if(!string.IsNullOrEmpty(alunos[i].Nome))
+                            {
+                                notaTotal = notaTotal + alunos[i].Nota;
+                                numeroAlunos++;
+                            }
+                        }
+
+                        var mediaGeral = notaTotal / numeroAlunos;
+                        Console.WriteLine($"MÉDIA GERAL: {mediaGeral}");
+                        
                         break;
 
                     default: throw new ArgumentOutOfRangeException();
