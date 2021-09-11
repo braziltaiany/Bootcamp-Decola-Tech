@@ -31,6 +31,8 @@
 
             instrucoes.InstrucaoReturn();
 
+            instrucoes.InstrucoesTryCatchFinallyThrow(lista);
+
          }
      }
  } 

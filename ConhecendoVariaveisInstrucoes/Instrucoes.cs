@@ -124,7 +124,41 @@ namespace ConhecendoVariaveisInstrucoes
             Console.WriteLine(Somar(3, 4));
             Console.WriteLine(Somar(5, 6));
             return;
-        }       
+        }
 
+        public void InstrucoesTryCatchFinallyThrow(string[] lista)
+        {
+            double Dividir(double x, double y)
+            {
+                if (y == 0)
+                    throw new DivideByZeroException();
+
+                return x / y;
+            }
+
+            try
+            {
+                if (lista.Length != 2)
+                {
+                    throw new InvalidOperationException("Informe 2 números");
+                }
+
+                double x = double.Parse(lista[0]);
+                double y = double.Parse(lista[1]);
+                Console.WriteLine(Dividir(x, y));
+            }
+            catch (InvalidOperationException err)
+            {
+                Console.WriteLine(err.Message);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine($"Erro genérico: {err.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Até breve!");
+            }
+        }
     }
 }
