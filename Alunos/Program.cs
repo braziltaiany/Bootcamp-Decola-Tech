@@ -20,8 +20,15 @@ namespace Alunos
 
                         Console.WriteLine("Informe a nota do aluno:");
 
-                        var nota = decimal.Parse(Console.ReadLine());
-                        aluno.Nota = nota;
+                        if (decimal.TryParse(Console.ReadLine(), out decimal nota))
+                        {
+                            aluno.Nota = nota;      
+                        }
+                        else
+                        {
+                            throw new ArgumentException(" Valor da nota deve ser decimal");
+                        }
+                        
                       
                         break;
                     case "2":
