@@ -20,6 +20,8 @@
             
             string[] textos = new string[3];
             instrucoes.InstrucaoDo(textos);
+
+            instrucoes.InstrucaoFor(lista);
          }
      }
  } 

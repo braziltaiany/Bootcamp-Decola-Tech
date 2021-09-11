@@ -69,5 +69,13 @@ namespace ConhecendoVariaveisInstrucoes
             } while (!string.IsNullOrEmpty(texto));
         }
 
+        public void InstrucaoFor(string[] lista)
+        {
+            for (int i = 0; i < lista.Length; i++)
+            {
+                Console.WriteLine($"{lista[i]}º item é : {lista[i]}.");
+            }
+        }
+
     }
 }
