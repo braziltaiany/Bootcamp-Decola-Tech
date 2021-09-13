@@ -8,7 +8,6 @@ namespace AgenciaBancaria.Dominio
 {
     public class Cliente
     {
-        //Criando um construtor
         public Cliente(string nome, string cpf, string rg, string logradouro, string cep, string cidade, string estado)
         {
             Nome = ValidaStringVazia(nome);
@@ -27,8 +26,6 @@ namespace AgenciaBancaria.Dominio
                 throw new Exception("Propriedade deve estar preenchida.") : texto;
         }
 
-        //acessor public e propriedades Nome, somente dentro da classe nome podemos setar a propriedade nome
-        //PROP+ TAB duas vezes adiciona uma propriedade automaticamente
         public string Nome { get; private set; }
         public string CPF { get; private set; }
         public string RG { get; private set; }
