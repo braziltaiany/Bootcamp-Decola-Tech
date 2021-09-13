@@ -10,6 +10,7 @@ namespace AgenciaBancaria.Dominio
     {
         // o método THIS torna o médoto de extensão podendo chamar o médodo de outra forma 
         // exemplo: Nome = nome.ValidaStringVazia() o que antes estava assim: ValidaStringVazia(nome);
+
         public static string ValidaStringVazia(this string texto)
         {
 

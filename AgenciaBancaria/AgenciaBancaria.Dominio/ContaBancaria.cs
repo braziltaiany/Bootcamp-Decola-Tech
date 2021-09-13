@@ -8,6 +8,10 @@ namespace AgenciaBancaria.Dominio
 {
     public class ContaBancaria
     {
+        public ContaBancaria()
+        {
+            Situacao = SituacaoConta.Criada;
+        }
         public int NumeroConta { get; init; }
         public int DigitoVerificador { get; init; }
         public decimal Saldo { get; protected set; }
@@ -16,6 +20,6 @@ namespace AgenciaBancaria.Dominio
         public SituacaoConta Situacao { get; private set; }
         public string Senha { get; private set; }
         public Cliente Cliente { get; init; }
-        public List<Lancamento> Lancamentos { get; private set; }
+       
     }
 }
