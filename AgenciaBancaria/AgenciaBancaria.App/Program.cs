@@ -9,14 +9,8 @@ namespace AgenciaBancaria.App
         {
             try
             {
-                Cliente cliente = new Cliente(
-                "Taiany",
-                "123456",
-                "1233733733",
-                "teste",
-                "12345678",
-                "rio de janeiro",
-                "RJ");
+                Endereco endereco = new Endereco("Rua teste", "12345678", "rio de janeiro", "RJ");
+                Cliente cliente = new Cliente("Taiany", "123456", "1233733733", endereco);
             }
 
             catch(Exception ex)

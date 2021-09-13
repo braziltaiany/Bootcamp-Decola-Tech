@@ -13,7 +13,7 @@ namespace AgenciaBancaria.Dominio
             Nome = nome.ValidaStringVazia();
             CPF = cpf.ValidaStringVazia();
             RG = rg.ValidaStringVazia();
-            Endereco = endereco;
+            Endereco = endereco ?? throw new Exception("Endereço deve ser informado.");// validação de campo nulo - ?? poderiamos utilizar até mais propriedade
             
         }
 
