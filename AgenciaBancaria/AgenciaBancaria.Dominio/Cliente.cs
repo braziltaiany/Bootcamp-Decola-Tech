@@ -9,7 +9,7 @@ namespace AgenciaBancaria.Dominio
     public class Cliente
     {
         //Criando um construtor
-        public Cliente(string nome, string cpf, string rg, string logradouro, string cep, string cidade, string estado) 
+        public Cliente(string nome, string cpf, string rg, string logradouro, string cep, string cidade, string estado)
         {
             //verificando se a string está vazia com o método string.IsNullOrWhiteSpace() 
             if (string.IsNullOrWhiteSpace(nome))
@@ -19,33 +19,22 @@ namespace AgenciaBancaria.Dominio
 
 
             Nome = nome;
-            
-            // ou podemos utilizar o operador ? que faz a mesma coisa que o if acima
-            CPF = string.IsNullOrWhiteSpace(cpf) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : cpf;
+            CPF = ValidaStringVazia(cpf);
+            RG = ValidaStringVazia(rg);      
+            Logradouro = ValidaStringVazia(logradouro) ;     
+            CEP = ValidaStringVazia(cep) ;    
+            Cidade = ValidaStringVazia(cidade) ;
+            Estado = ValidaStringVazia(estado);
 
-            RG = string.IsNullOrWhiteSpace(rg) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : rg;
-
-            Logradouro = string.IsNullOrWhiteSpace(logradouro) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : logradouro;
-
-            CEP = string.IsNullOrWhiteSpace(cep) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : cep;
-
-            Cidade = string.IsNullOrWhiteSpace(cidade) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : cidade;
-
-            Estado = string.IsNullOrWhiteSpace(estado) ?
-                throw new Exception("Propriedade deve estar preenchida.")
-                : estado;
         }
-        
+
+        private static string ValidaStringVazia(string texto)
+        {
+            // ou podemos utilizar o operador ? que faz a mesma coisa que o if acima
+            return string.IsNullOrWhiteSpace(texto) ?
+                throw new Exception("Propriedade deve estar preenchida.") : texto;
+        }   
+
         //acessor public e propriedades Nome, somente dentro da classe nome podemos setar a propriedade nome
         //PROP+ TAB duas vezes adiciona uma propriedade automaticamente
         public string Nome { get; private set; }
@@ -55,6 +44,4 @@ namespace AgenciaBancaria.Dominio
         public string CEP { get; private set; }
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
-
     }
-}
