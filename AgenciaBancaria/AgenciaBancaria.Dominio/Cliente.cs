@@ -10,20 +10,14 @@ namespace AgenciaBancaria.Dominio
     {
         public Cliente(string nome, string cpf, string rg, string logradouro, string cep, string cidade, string estado)
         {
-            Nome = ValidaStringVazia(nome);
-            CPF = ValidaStringVazia(cpf);
-            RG = ValidaStringVazia(rg);
-            Logradouro = ValidaStringVazia(logradouro);
-            CEP = ValidaStringVazia(cep);
-            Cidade = ValidaStringVazia(cidade);
-            Estado = ValidaStringVazia(estado);
+            Nome = nome.ValidaStringVazia();
+            CPF = cpf.ValidaStringVazia();
+            RG = rg.ValidaStringVazia();
+            Logradouro = logradouro.ValidaStringVazia();
+            CEP = CEP.ValidaStringVazia();
+            Cidade = cidade.ValidaStringVazia();
+            Estado = estado.ValidaStringVazia();
 
-        }
-        private static string ValidaStringVazia(string texto)
-        {
-
-            return string.IsNullOrWhiteSpace(texto) ?
-                throw new Exception("Propriedade deve estar preenchida.") : texto;
         }
 
         public string Nome { get; private set; }

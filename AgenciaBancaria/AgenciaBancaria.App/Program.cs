@@ -7,16 +7,24 @@ namespace AgenciaBancaria.App
     {
         static void Main(string[] args)
         {
-            Cliente cliente = new Cliente(
-                "Taiany", 
-                "123456", 
-                "1233733733", 
-                "teste", 
-                "12345678", 
-                "rio de janeiro", 
+            try
+            {
+                Cliente cliente = new Cliente(
+                "Taiany",
+                "123456",
+                "1233733733",
+                "teste",
+                "12345678",
+                "rio de janeiro",
                 "RJ");
+            }
 
-            Console.WriteLine(cliente.Nome);
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
         }
 
     }

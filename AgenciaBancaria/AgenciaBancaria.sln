@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgenciaBancaria.Dominio", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgenciaBancaria.App", "AgenciaBancaria.App\AgenciaBancaria.App.csproj", "{CF4B7614-A203-4CEA-9CF6-E29F74BEC56D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaBancariaApp.App", "AgenciaBancariaApp.App\AgenciaBancariaApp.App.csproj", "{C66C51E4-D22E-4E9C-B3A6-AE0F284E0548}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{CF4B7614-A203-4CEA-9CF6-E29F74BEC56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4B7614-A203-4CEA-9CF6-E29F74BEC56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4B7614-A203-4CEA-9CF6-E29F74BEC56D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C66C51E4-D22E-4E9C-B3A6-AE0F284E0548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C66C51E4-D22E-4E9C-B3A6-AE0F284E0548}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C66C51E4-D22E-4E9C-B3A6-AE0F284E0548}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C66C51E4-D22E-4E9C-B3A6-AE0F284E0548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
