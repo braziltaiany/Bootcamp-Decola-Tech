@@ -9,7 +9,7 @@ namespace AgenciaBancaria.Dominio
     public class ContaBancaria
     {
         //construtor
-       public ContaBancaria(Cliente cliente)
+        public ContaBancaria(Cliente cliente)
         {
             // estou garantindo que minha conta sempre quando criar sempre terá numero da conta e digito verificador
             Random random = new Random();
@@ -17,6 +17,16 @@ namespace AgenciaBancaria.Dominio
             DigitoVerificador = random.Next(0, 9);
             Situacao = SituacaoConta.Criada;
         }
+
+        public void Abrir(string senha)
+        {
+            Senha = senha.ValidaStringVazia();
+
+            Situacao = SituacaoConta.Aberta;
+            
+            DataAbertura = DateTime.Now;
+        }
+
         public int NumeroConta { get; init; }// init significa so posso setar os valores de NumeroConta na inicialização da minha classe no construtor
         public int DigitoVerificador { get; init; }// NumeroConta esse campo não podem ser modificados
         public decimal Saldo { get; protected set; }// minhas classes filhas, as classes que herdarem pode setar a propriedade saldo
