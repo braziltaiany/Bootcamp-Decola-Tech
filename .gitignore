@@ -354,9 +354,3 @@ MigrationBackup/
 bin/
 obj/
 .Vscode/
-
-/bin/
-/obj/
-/.Vscode/
-/.vs/
-.vs/AgenciaBancaria
