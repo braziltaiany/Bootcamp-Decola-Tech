@@ -11,29 +11,21 @@ namespace AgenciaBancaria.Dominio
         //Criando um construtor
         public Cliente(string nome, string cpf, string rg, string logradouro, string cep, string cidade, string estado)
         {
-            //verificando se a string está vazia com o método string.IsNullOrWhiteSpace() 
-            if (string.IsNullOrWhiteSpace(nome))
-            {
-                throw new Exception("Propriedade deve estar preenchida.");
-            }
-
-
-            Nome = nome;
+            Nome = ValidaStringVazia(nome);
             CPF = ValidaStringVazia(cpf);
-            RG = ValidaStringVazia(rg);      
-            Logradouro = ValidaStringVazia(logradouro) ;     
-            CEP = ValidaStringVazia(cep) ;    
-            Cidade = ValidaStringVazia(cidade) ;
+            RG = ValidaStringVazia(rg);
+            Logradouro = ValidaStringVazia(logradouro);
+            CEP = ValidaStringVazia(cep);
+            Cidade = ValidaStringVazia(cidade);
             Estado = ValidaStringVazia(estado);
 
         }
-
         private static string ValidaStringVazia(string texto)
         {
-            // ou podemos utilizar o operador ? que faz a mesma coisa que o if acima
+
             return string.IsNullOrWhiteSpace(texto) ?
                 throw new Exception("Propriedade deve estar preenchida.") : texto;
-        }   
+        }
 
         //acessor public e propriedades Nome, somente dentro da classe nome podemos setar a propriedade nome
         //PROP+ TAB duas vezes adiciona uma propriedade automaticamente
@@ -44,4 +36,4 @@ namespace AgenciaBancaria.Dominio
         public string CEP { get; private set; }
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
-    }
+}   }
