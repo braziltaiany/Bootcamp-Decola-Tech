@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
@@ -18,20 +19,32 @@ namespace AgenciaBancaria.Dominio
             Situacao = SituacaoConta.Criada;
         }
 
+     
         public void Abrir(string senha)
         {
-
             SetaSenha(senha);
 
             Situacao = SituacaoConta.Aberta;
-            
             DataAbertura = DateTime.Now;
+            
         }
-
         private void SetaSenha(string senha)
         {
-            Senha = senha.ValidaStringVazia();
+            senha = senha.ValidaStringVazia();
+
+            // regras para traballhar com string, preciso verificar se uma determinada regra que vamos atribuir é valida
+            // pra isso utilizaremos o regex
+            // Mínimo de oito caracteres, pelo menos uma letra e um número
+            if (!Regex.IsMatch(senha, @"^(?=.*?[a-z])(?=.*?[0-9]).{8,}$"))
+            {
+                throw new Exception("Senha inválida");
+            }
+
+            Senha = senha;
+
+          
         }
+
 
         public int NumeroConta { get; init; }// init significa so posso setar os valores de NumeroConta na inicialização da minha classe no construtor
         public int DigitoVerificador { get; init; }// NumeroConta esse campo não podem ser modificados
