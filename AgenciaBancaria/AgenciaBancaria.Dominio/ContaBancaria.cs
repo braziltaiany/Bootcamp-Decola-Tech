@@ -20,11 +20,17 @@ namespace AgenciaBancaria.Dominio
 
         public void Abrir(string senha)
         {
-            Senha = senha.ValidaStringVazia();
+
+            SetaSenha(senha);
 
             Situacao = SituacaoConta.Aberta;
             
             DataAbertura = DateTime.Now;
+        }
+
+        private void SetaSenha(string senha)
+        {
+            Senha = senha.ValidaStringVazia();
         }
 
         public int NumeroConta { get; init; }// init significa so posso setar os valores de NumeroConta na inicialização da minha classe no construtor
