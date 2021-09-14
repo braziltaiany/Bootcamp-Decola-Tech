@@ -14,10 +14,15 @@ namespace AgenciaBancaria.App
                 ContaBancaria conta = new ContaBancaria(cliente);
 
                 Console.WriteLine("----------Conta Criada------------");
+                Console.WriteLine("");
                 Console.WriteLine($"Situação:{conta.Situacao}       Conta:{conta.NumeroConta}-{conta.DigitoVerificador}");
-
-                conta.Abrir("abc123");
+                Console.WriteLine("");
+                Console.WriteLine("************************************");
+                Console.WriteLine("");
+                
+                conta.Abrir("abc12345");
                 Console.WriteLine("----------Conta Aberta------------");
+                Console.WriteLine("");
                 Console.WriteLine($"Situação:{conta.Situacao}       Conta:{conta.NumeroConta}-{conta.DigitoVerificador}");
 
             }
