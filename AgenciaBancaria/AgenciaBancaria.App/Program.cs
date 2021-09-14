@@ -13,9 +13,13 @@ namespace AgenciaBancaria.App
                 Cliente cliente = new Cliente("Taiany", "123456", "1233733733", endereco);
                 ContaBancaria conta = new ContaBancaria(cliente);
 
-                Console.WriteLine("----------Conta criada------------");
-                Console.WriteLine($"Conta:{conta.NumeroConta}-{conta.DigitoVerificador}");
-            
+                Console.WriteLine("----------Conta Criada------------");
+                Console.WriteLine($"Situação:{conta.Situacao}       Conta:{conta.NumeroConta}-{conta.DigitoVerificador}");
+
+                conta.Abrir("abc123");
+                Console.WriteLine("----------Conta Aberta------------");
+                Console.WriteLine($"Situação:{conta.Situacao}       Conta:{conta.NumeroConta}-{conta.DigitoVerificador}");
+
             }
 
             catch(Exception ex)
