@@ -8,11 +8,13 @@ namespace AgenciaBancaria.Dominio
 {
     public class ContaCorrente : ContaBancaria
     {
-        public ContaCorrente(Cliente cliente): base(cliente)
+        public ContaCorrente(Cliente cliente, decimal limite): base(cliente)
         {
             ValorTaxaManutencao = 0.05M;
+            Limite = limite;
         }
 
+        public decimal Limite { get; set; }
         public decimal ValorTaxaManutencao { get; private set; }
     }
 }

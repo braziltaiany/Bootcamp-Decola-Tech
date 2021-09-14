@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
 {
-    public class ContaBancaria
+    //utilização do abstract para garantir criar conta corrente ou conta poupança, impedindo de criar conta bancaria diretamente. Po´rem ela pode ser herdada
+    public abstract class ContaBancaria
     {
         //construtor
         public ContaBancaria(Cliente cliente)
@@ -45,7 +46,25 @@ namespace AgenciaBancaria.Dominio
           
         }
 
+        //Polimorfismo
+        public  void Sacar(decimal valor, string senha)
+        {
+            if (senha != Senha)
+            {
+                throw new Exception("Senha incorreta.");
+            }
 
+            
+
+            if (Saldo < valor)
+            {
+                throw new Exception("Saldo indisponível.");
+            }
+
+            Saldo -=  valor;
+
+            
+        }
         public int NumeroConta { get; init; }// init significa so posso setar os valores de NumeroConta na inicialização da minha classe no construtor
         public int DigitoVerificador { get; init; }// NumeroConta esse campo não podem ser modificados
         public decimal Saldo { get; protected set; }// minhas classes filhas, as classes que herdarem pode setar a propriedade saldo
