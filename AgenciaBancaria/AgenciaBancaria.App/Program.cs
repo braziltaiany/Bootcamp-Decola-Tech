@@ -13,7 +13,7 @@ namespace AgenciaBancaria.App
                 Cliente cliente = new Cliente("Taiany", "123456", "1233733733", endereco);
                 
                 //ContaBancaria conta = new ContaCorrente(cliente); //agora irá dar erro por causa do abstract
-                ContaCorrente conta = new ContaCorrente(cliente);
+                ContaCorrente conta = new ContaCorrente(cliente, 100); // colocaremos 100 de limite
 
                 Console.WriteLine("----------Conta Criada------------");
                 Console.WriteLine($"Cliente: {cliente.Nome} CPF: {cliente.CPF}");

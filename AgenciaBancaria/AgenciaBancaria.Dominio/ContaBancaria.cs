@@ -46,8 +46,8 @@ namespace AgenciaBancaria.Dominio
           
         }
 
-        //Polimorfismo
-        public  void Sacar(decimal valor, string senha)
+        //Polimorfismo é utilizar o mesmo método com comportamentos diferentes
+        public  virtual void Sacar(decimal valor, string senha)
         {
             if (senha != Senha)
             {
