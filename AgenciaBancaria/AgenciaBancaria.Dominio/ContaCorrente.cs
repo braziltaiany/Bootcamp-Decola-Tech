@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
 {
-    class ContaCorrente
+    public class ContaCorrente : ContaBancaria
     {
+        public ContaCorrente(Cliente cliente): base(cliente)
+        {
+            ValorTaxaManutencao = 0.05M;
+        }
+
+        public decimal ValorTaxaManutencao { get; private set; }
     }
 }
