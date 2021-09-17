@@ -51,7 +51,7 @@ namespace ApiCatalogoJogos.Controllers.V1
 
         [HttpDelete("{idJogo:guid}")]
 
-        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo)
+        public async Task<ActionResult<List<Object>>> ApagarJogo(Guid Idjogo)
         {
             return Ok();
         }
