@@ -35,11 +35,18 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok();
         }
 
+        //put eu atualizo o conteudo inteiro
         [HttpPut("{idJogo:guid}")]
         public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo, object jogo)
         {
             return Ok();
         }
 
+        //no patch eu atualizo uma coisa especifica, exemplo: só o preço do jogo
+        [HttpPatch("{idJogo:guid/preco/{preco:double}")]
+        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo, double preco)
+        {
+            return Ok();
+        }
     }
 }
