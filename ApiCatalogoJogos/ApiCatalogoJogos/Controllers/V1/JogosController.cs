@@ -12,7 +12,7 @@ namespace ApiCatalogoJogos.Controllers.V1
     [ApiController]
     public class JogosController : ControllerBase
     {
-        //crud
+        [HttpGet]
         // task utilizado para garantir uma melhor performance requisições web
         //async ele vai esperar um ActionResult de uma listagem de objetos
         //actionResult é um tipo de retorno, dos status HTTp
@@ -21,5 +21,7 @@ namespace ApiCatalogoJogos.Controllers.V1
         {
             return Ok();
         }
+
+       
     }
 }
