@@ -73,23 +73,53 @@ namespace ApiCatalogoJogos.Controllers.V1
 
         //put eu atualizo o conteudo inteiro
         [HttpPut("{idJogo:guid}")]
-        public async Task<ActionResult<JogoViewModel>> AtualizarJogo(Guid Idjogo, JogoInputModel jogo)
+        public async Task<ActionResult> AtualizarJogo([FromRoute] Guid idJogo, [FromBody] JogoInputModel jogoInputModel)
         {
-            return Ok();
+            try
+            {
+                await _jogoService.Atualizar(idJogo, jogoInputModel);
+
+                return Ok();
+            }
+            //catch (JogoNaoCadastradoException ex)
+            catch (Exception ex)
+            {
+                return NotFound("Não existe este jogo");
+            }
         }
 
         //no patch eu atualizo uma coisa especifica, exemplo: só o preço do jogo
-        [HttpPatch("{idJogo:guid/preco/{preco:double}")]
-        public async Task<ActionResult> AtualizarJogo(Guid Idjogo, double preco)
+        [HttpPatch("{idJogo:guid}/preco/{preco:double}")]
+        public async Task<ActionResult> AtualizarJogo([FromRoute] Guid idJogo, [FromRoute] double preco)
         {
-            return Ok();
+            try
+            {
+                await _jogoService.Atualizar(idJogo, preco);
+
+                return Ok();
+            }
+            //catch (JogoNaoCadastradoException ex)
+            catch (Exception ex)
+            {
+                return NotFound("Não existe este jogo");
+            }
         }
 
         [HttpDelete("{idJogo:guid}")]
-
-        public async Task<ActionResult> ApagarJogo(Guid Idjogo)
+        public async Task<ActionResult> ApagarJogo([FromRoute] Guid idJogo)
         {
-            return Ok();
+            try
+            {
+                await _jogoService.Remover(idJogo);
+
+                return Ok();
+            }
+            //catch (JogoNaoCadastradoException ex)
+            catch (Exception ex)
+            {
+                return NotFound("Não existe este jogo");
+            }
         }
+
     }
 }
