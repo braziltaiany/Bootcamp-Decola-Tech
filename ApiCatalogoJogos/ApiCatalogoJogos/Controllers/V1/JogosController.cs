@@ -48,5 +48,12 @@ namespace ApiCatalogoJogos.Controllers.V1
         {
             return Ok();
         }
+
+        [HttpDelete("{idJogo:guid}")]
+
+        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo)
+        {
+            return Ok();
+        }
     }
 }
