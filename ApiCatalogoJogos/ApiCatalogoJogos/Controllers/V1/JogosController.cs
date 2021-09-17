@@ -45,9 +45,14 @@ namespace ApiCatalogoJogos.Controllers.V1
 
         //Contratos injeção de dependencia
         //Tem que depender de contratos, recebo um contrato que é uma interface de um serviço que foi implantado. No caso a classe IJogoService
-        public async Task<ActionResult<JogoViewModel>> Obter(Guid idJogo)
+        public async Task<ActionResult<JogoViewModel>> Obter([FromRoute] Guid idJogo)
         {
-            return Ok();
+            var jogo = await _jogoService.Obter(idJogo);
+
+            if (jogo == null)
+                return NoContent();
+
+            return Ok(jogo);
         }
 
         [HttpPost]
