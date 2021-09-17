@@ -29,7 +29,17 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok();
         }
 
+        [HttpPost]
+        public async Task<ActionResult<List<Object>>> InserirJogo(object jogo)
+        {
+            return Ok();
+        }
 
+        [HttpPut("{idJogo:guid}")]
+        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo, object jogo)
+        {
+            return Ok();
+        }
 
     }
 }
