@@ -22,6 +22,14 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok();
         }
 
-       
+        [HttpGet("{idJogo:guid}")]
+
+        public async Task<ActionResult<List<Object>>> Obter(Guid idJogo)
+        {
+            return Ok();
+        }
+
+
+
     }
 }
