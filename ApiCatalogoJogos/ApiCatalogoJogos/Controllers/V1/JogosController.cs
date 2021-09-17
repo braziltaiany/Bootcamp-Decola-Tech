@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiCatalogoJogos.inputModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,14 +31,14 @@ namespace ApiCatalogoJogos.Controllers.V1
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Object>>> InserirJogo(object jogo)
+        public async Task<ActionResult<List<Object>>> InserirJogo(JogoInputModel jogo)
         {
             return Ok();
         }
 
         //put eu atualizo o conteudo inteiro
         [HttpPut("{idJogo:guid}")]
-        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo, object jogo)
+        public async Task<ActionResult<List<Object>>> AtualizarJogo(Guid Idjogo, JogoInputModel jogo)
         {
             return Ok();
         }
