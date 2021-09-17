@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiCatalogoJogos.inputModel;
+using ApiCatalogoJogos.Services;
 using ApiCatalogoJogos.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,14 +16,29 @@ namespace ApiCatalogoJogos.Controllers.V1
     [ApiController]
     public class JogosController : ControllerBase
     {
+        //interface
+        private readonly IJogoService _jogoService;
+
+        //ganhamos uma instancia
+        public JogosController(IJogoService jogoService)
+        {
+            _jogoService = jogoService;
+        }
+
+
         [HttpGet]
         // task utilizado para garantir uma melhor performance requisições web
         //async ele vai esperar um ActionResult de uma listagem de objetos
         //actionResult é um tipo de retorno, dos status HTTp
         //método
-        public async Task<ActionResult<List<Object>>> Obter()
+        public async Task<ActionResult<IEnumerable<JogoViewModel>>> Obter([FromQuery, Range(1, int.MaxValue)] int pagina = 1, [FromQuery, Range(1, 50)] int quantidade = 5)
         {
-            return Ok();
+            var jogos = await _jogoService.Obter(pagina, quantidade);
+
+            if (jogos.Count() == 0)
+                return NoContent();
+
+            return Ok(jogos);
         }
 
         [HttpGet("{idJogo:guid}")]
