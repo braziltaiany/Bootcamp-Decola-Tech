@@ -24,5 +24,11 @@ namespace WebApiSerie.Controllers
         {
             return Ok(model);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Exclui(int id)
+        {
+            return Ok(id);
+        }
     }
 }
