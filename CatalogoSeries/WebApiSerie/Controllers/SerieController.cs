@@ -30,5 +30,17 @@ namespace WebApiSerie.Controllers
         {
             return Ok(id);
         }
+
+        [HttpPost("")]
+        public IActionResult Insere([FromBody] SerieModel model)
+        {
+            return Ok(model);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Consulta(int id)
+        {
+            return Ok(id);
+        }
     }
 }
