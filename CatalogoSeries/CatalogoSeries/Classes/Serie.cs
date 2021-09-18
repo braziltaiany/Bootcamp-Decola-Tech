@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CatalogoSeries.Series
+namespace CatalogoSeries.Classes
 {
-	public class Serie : EntidadeBase
+    public class Serie : EntidadeBase
 	{
 		// Atributos
 		private Genero Genero { get; set; }
@@ -24,7 +22,12 @@ namespace CatalogoSeries.Series
 			this.Excluido = false;
 		}
 
-		public override string ToString()
+        public Genero retornaGenero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
 		{
 			// Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netcore-3.1
 			string retorno = "";
@@ -36,7 +39,17 @@ namespace CatalogoSeries.Series
 			return retorno;
 		}
 
-		public string retornaTitulo()
+        public string retornaDescricao()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int retornaAno()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string retornaTitulo()
 		{
 			return this.Titulo;
 		}

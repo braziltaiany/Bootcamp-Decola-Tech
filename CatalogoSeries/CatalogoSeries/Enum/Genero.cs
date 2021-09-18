@@ -1,4 +1,4 @@
-namespace CatalogoSeries.Series
+namespace CatalogoSeries.Classes
 
 {
 	public enum Genero

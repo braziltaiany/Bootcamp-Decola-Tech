@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
-using  CatalogoSeries.Series.Interfaces;
 
-namespace  CatalogoSeries.Series
+using System.Collections.Generic;
+using CatalogoSeries.Classes.Interfaces;
+
+namespace CatalogoSeries.Classes
 {
 	public class SerieRepositorio : IRepositorio<Serie>
 	{
