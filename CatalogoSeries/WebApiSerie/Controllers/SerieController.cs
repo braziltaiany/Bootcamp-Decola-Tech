@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiSerie.Controllers
-{ 
+{
     [Route("[controller]")]
     public class SerieController : Controller
     {
@@ -17,6 +17,12 @@ namespace WebApiSerie.Controllers
             series.Add(new SerieModel() { Titulo = "Titulo Série 4" });
 
             return Ok(series);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualiza(int id, [FromBody] SerieModel model)
+        {
+            return Ok(model);
         }
     }
 }
