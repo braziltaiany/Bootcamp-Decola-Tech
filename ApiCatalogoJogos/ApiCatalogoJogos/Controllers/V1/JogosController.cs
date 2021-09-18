@@ -1,7 +1,7 @@
 ﻿using ApiCatalogoJogos.inputModel;
 using ApiCatalogoJogos.Services;
 using ApiCatalogoJogos.ViewModel;
-using ExemploApiCatalogoJogos.Exceptions;
+using ApiCatalogoJogos.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ExemploApiCatalogoJogos.Controllers.V1
+namespace ApiCatalogoJogos.Controllers.V1
 {
     [Route("api/v1/[controller]")]
     [ApiController]

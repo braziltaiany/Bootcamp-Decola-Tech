@@ -1,15 +1,15 @@
 ﻿using ApiCatalogoJogos.inputModel;
 using ApiCatalogoJogos.Services;
 using ApiCatalogoJogos.ViewModel;
-using ExemploApiCatalogoJogos.Entities;
-using ExemploApiCatalogoJogos.Exceptions;
-using ExemploApiCatalogoJogos.Repositories;
+using ApiCatalogoJogos.Entities;
+using ApiCatalogoJogos.Exceptions;
+using ApiCatalogoJogos.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ExemploApiCatalogoJogos.Services
+namespace ApiCatalogoJogos.Services
 {
     public class JogoService : IJogoService
     {

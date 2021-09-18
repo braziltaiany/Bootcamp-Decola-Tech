@@ -3,7 +3,7 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExemploApiCatalogoJogos.Controllers.V1
+namespace ApiCatalogoJogos.Controllers.V1
 {
     [Route("api/v1/[controller]")]
     [ApiController]

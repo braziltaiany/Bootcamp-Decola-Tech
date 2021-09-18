@@ -1,7 +1,6 @@
 using ApiCatalogoJogos.Services;
-using ExemploApiCatalogoJogos.Controllers.V1;
-using ExemploApiCatalogoJogos.Repositories;
-using ExemploApiCatalogoJogos.Services;
+using ApiCatalogoJogos.Controllers.V1;
+using ApiCatalogoJogos.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -11,8 +10,9 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
+using ApiCatalogoJogos.Middleware;
 
-namespace ExemploApiCatalogoJogos
+namespace ApiCatalogoJogos
 {
     public class Startup
     {
@@ -57,7 +57,16 @@ namespace ExemploApiCatalogoJogos
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ExemploApiCatalogoJogos v1"));
             }
 
-           
+        app.UseMiddleware<ExceptionMiddleware>();
+
+        app.UseHttpsRedirection();
+
+        app.UseRouting();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
         }
     }
 }

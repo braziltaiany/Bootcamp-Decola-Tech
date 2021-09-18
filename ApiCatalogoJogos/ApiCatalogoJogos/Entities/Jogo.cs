@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExemploApiCatalogoJogos.Entities
+namespace ApiCatalogoJogos.Entities
 {
     public class Jogo
     {

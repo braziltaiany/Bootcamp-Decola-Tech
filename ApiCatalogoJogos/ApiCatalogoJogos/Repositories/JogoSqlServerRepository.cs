@@ -1,11 +1,11 @@
-﻿using ExemploApiCatalogoJogos.Entities;
+﻿using ApiCatalogoJogos.Entities;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace ExemploApiCatalogoJogos.Repositories
+namespace ApiCatalogoJogos.Repositories
 {
     public class JogoSqlServerRepository : IJogoRepository
     {

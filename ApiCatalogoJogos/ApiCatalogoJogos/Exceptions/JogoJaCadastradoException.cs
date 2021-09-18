@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExemploApiCatalogoJogos.Exceptions
+namespace ApiCatalogoJogos.Exceptions
 {
     public class JogoJaCadastradoException : Exception
     {
